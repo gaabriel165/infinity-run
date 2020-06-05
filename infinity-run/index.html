@@ -1,0 +1,45 @@
+<html lang="pt-BR">
+
+	<head>
+		<title> Infinity Run</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+
+		<canvas width="850" height="500"></canvas>
+
+		<style type="text/css">
+
+			canvas{
+
+				margin-left: 250;
+				margin-top: 60;
+				border-style: solid;
+			}
+		</style>
+
+		<script src="carregaArquivos.js"></script>
+		<script src="gameloop.js"></script>
+		<script src="personagem.js"></script>
+		<script src="inimigo.js"></script>
+		<script src="colisao.js"></script>
+		<script src="parallax.js"></script>
+		<script src="inicia.js"></script>
+		<script src="pontos.js"></script>
+		<script src="dificulta.js"></script>
+		<script src="perdeu.js"></script>
+
+		<script type="text/javascript">
+
+
+			var tela = document.querySelector("canvas");
+			var context = tela.getContext("2d");
+
+			document.onmousemove = mudaCursor;
+			document.onclick = iniciaJogo;
+			document.onkeydown = verificaTeclaOn;
+			setInterval(somaPontos, 50);
+			setInterval(gameloop, 5);
+		</script>
+	</body>
+</html>
